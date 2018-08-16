@@ -1,14 +1,19 @@
 package com.home.tidy.controllers;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/test")
+@Controller
 public class TestController {
 
     @RequestMapping("/ping")
     public String pingTest() {
         return "OK";
     }
+
+    @RequestMapping("/")
+    public String home() {
+        return "index.html";
+    }
+
 }
